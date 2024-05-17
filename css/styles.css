@@ -4,6 +4,7 @@ body {
     font-family: Consolas;
     background-color:aliceblue;
     margin: 0;
+    font-weight: 200;
 }
 
 body div {
@@ -15,6 +16,13 @@ body div {
 .content{
     margin-left: 20%;
     margin-right: 20%;
+}
+
+a {
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: 900;
+    font-style: italic;
 }
 
 /* Header */
@@ -30,7 +38,6 @@ body div {
 
 .header .logo {
     font-size: 20px;
-    font-weight: 900;
 }
 
 .header .link-container {
@@ -42,5 +49,11 @@ body div {
 /* Main */
 .main {
     background-color: rgb(50, 75, 96);
+    color: aliceblue;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(60, 60, 60);
     color: aliceblue;
 }
