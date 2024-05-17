@@ -1,0 +1,46 @@
+
+/* Global styles */
+body {
+    font-family: Consolas;
+    background-color:aliceblue;
+    margin: 0;
+}
+
+body div {
+    margin: 0;
+    padding-top: 7px;
+    padding-top: 7px;
+}
+
+.content{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Header */
+.header {
+    background-color: rgb(60, 60, 60);
+    color: aliceblue;
+}
+
+.header .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.header .link-container {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+/* Main */
+.main {
+    background-color: rgb(50, 75, 96);
+    color: aliceblue;
+}
