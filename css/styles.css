@@ -32,50 +32,51 @@ img {
 }
 
 /* Header */
-.header {
+#header {
     background-color: rgb(60, 60, 60);
     color: aliceblue;
     padding-bottom: 2%;
 }
 
-.header .content {
+#header .content {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
-.header .logo {
+#header .logo {
     font-size: 20px;
 }
 
-.header .link-container {
+#header .link-container {
     display: flex;
-    gap: 5%;
+    gap: 20px;
     align-items: center;
 }
 
 /* Main */
-.main {
+#main {
     background-color: rgb(50, 75, 96);
     padding-bottom: 2%;
 }
 
-.main .content {
+#main .content {
     display: flex;
     justify-content: space-between;
     color: aliceblue;
 }
 
-.main .content h2 {
+#main .content h2 {
     font-size: 36px;
     font-weight: 700;
 }
 
-.main .content p {
+#main .content p {
     font-size: 24px;
 }
 
 /* Footer */
-.footer {
+#footer {
     text-align: center;
     background-color: rgb(60, 60, 60);
     color: aliceblue;
