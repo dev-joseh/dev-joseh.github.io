@@ -44,6 +44,7 @@ img {
     border: 2px solid aliceblue;
     cursor: pointer;
     font-style: normal;
+    margin: 5px;
 }
 
 .btn:hover {
@@ -53,9 +54,9 @@ img {
 
 /* Header */
 #header {
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(40, 40, 40);
     color: aliceblue;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 #header .content {
@@ -79,7 +80,7 @@ img {
 #main {
     background-color: rgb(50, 75, 96);
     padding-bottom: 40px;
-    margin-bottom: 10px;
+    padding-top: 40px;
 }
 
 #main .content {
@@ -87,7 +88,7 @@ img {
     justify-content: space-between;
     gap: 20px;
     color: aliceblue;
-    align-items: center;
+    align-content: center;
 }
 
 #main .content h2 {
@@ -115,7 +116,7 @@ img {
 /* Footer */
 #footer {
     text-align: center;
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(40, 40, 40);
     color: aliceblue;
     padding: 1%;
 }
