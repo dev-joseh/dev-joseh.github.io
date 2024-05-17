@@ -9,8 +9,8 @@ body {
 
 body div {
     margin: 0;
-    padding-top: 7px;
-    padding-top: 7px;
+    padding-bottom: 0.2%;
+    padding-top: 0.2%;
 }
 
 .content{
@@ -54,9 +54,23 @@ img {
 
 /* Header */
 #header {
-    background-color: rgb(40, 40, 40);
+    position: fixed;
+    top: 0%;
+    height: 40px;
+    width: 100%;
     color: aliceblue;
-    padding-bottom: 1%;
+    background-color: hsla(0, 0%, 0%, 0);
+    z-index: 9999;
+}
+
+#header_background {
+    position: fixed;
+    top: -10px;
+    height: 50px;
+    width: 100%;
+    filter: brightness(90%) contrast(90%) blur(2px) grayscale(10%);
+    background-color: hsla(0, 0%, 16%, 0.75);
+    z-index: 1;
 }
 
 #header .content {
@@ -80,7 +94,7 @@ img {
 #main {
     background-color: rgb(50, 75, 96);
     padding-bottom: 40px;
-    padding-top: 40px;
+    padding-top: 90px;
 }
 
 #main .content {
@@ -111,6 +125,13 @@ img {
     0%{color: rgba(240, 248, 255, 0);}
     50%{color: aliceblue;}
     100%{color: rgba(240, 248, 255, 0);}
+}
+
+/* Projects */
+
+#projects {
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 /* Footer */
