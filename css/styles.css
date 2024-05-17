@@ -32,6 +32,24 @@ img {
     border-radius: 10px;
 }
 
+button {
+    color: aliceblue;
+    font-weight: 600;
+    background-color: #3882F6;
+    border-radius: 10px;
+    padding: 10px;
+    height: 1.1cm;
+    width: 3.5cm;
+    font-size: 16px;
+    border: 2px solid aliceblue;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aliceblue;
+    color: #3882F6;
+}
+
 /* Header */
 #header {
     background-color: rgb(60, 60, 60);
