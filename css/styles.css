@@ -47,6 +47,7 @@ a {
 .btn:hover {
     background-color: aliceblue;
     color: #3882F6;
+    transition: .5s ease;
 }
 
 /* Header */
@@ -155,7 +156,6 @@ a {
     width: 200px;
     border: 4px solid rgb(50, 75, 96);
     border-radius: 10px;
-    z-index: 2;
 }
 
 #projects .overlay {
@@ -164,7 +164,7 @@ a {
     width: 200px;
     border: 4px solid rgb(50, 75, 96);
     border-radius: 10px;
-    z-index: 999;
+    z-index: 99;
     opacity: 0;
     transition: .5s ease;
     background-color: rgb(50, 75, 96);
@@ -178,6 +178,45 @@ a {
 
 #projects .overlay:hover{
     opacity: 0.75;
+}
+
+/* Contacts */
+#contacts {
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+#contacts .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #3882F6;
+    border-radius: 10px;
+    padding: 40px;
+    color: aliceblue;
+    align-items: center;
+}
+
+#contacts h3 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#contacts span {
+    justify-content: center;
+}
+
+#contacts img {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    border: 5px solid aliceblue;
+    background-color: aliceblue;
+    transition: .5s ease;
+}
+
+#contacts img:hover{
+    filter: brightness(150%);
 }
 
 /* Footer */
