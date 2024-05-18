@@ -18,7 +18,9 @@
     <div id="grid">
         <div class="content">
             <div class="input">
-                <input type="range" min="1" max="100" value="6" class="slider" id="blocksSlider">
+                <p>Number of blocks: <span>0</span>x<span>0</span></p>
+                <input type="range" min="1" max="100" value="1" class="slider" id="blockSlider" oninput="changeGridLayout(this.value)">
+                <input type="color" id="html5colorpicker" value="#ff0000">
             </div>
             <div class="sketch"></div>
         </div>
