@@ -3,7 +3,7 @@
 
 body {
     font-family: Consolas;
-    background-color:aliceblue;
+    background-color: bisque;
     margin: 0;
     padding: 0;
     font-weight: 200;
@@ -41,12 +41,51 @@ a {
     color: #3882F6;
 }
 
-/* Section 1 */
+/* Header */
 
-#header {
+#header{
     padding-top: 1%;
     padding-bottom: 1%;
     color: aliceblue;
     text-align: center;
     background-color: hsl(0, 0%, 16%);
+}
+
+/* Grid */
+
+#grid {
+    padding-top: 3%;
+    padding-bottom: 6%;
+}
+
+/* Input */
+
+#grid .input {
+    align-items: bottom;
+}
+
+#grid .content .sketch{
+    margin-left: 30%;
+    height: 600px;
+    width: 600px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 0, 0);
+}
+/* Columns */
+#grid .content .sketch div{
+    display: flex;
+    flex: 1;
+}
+/* Rows */
+#grid .content .sketch div div{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.148);
+    flex: 1;
+}
+
+#grid .content .sketch div div:hover{
+    filter: brightness(110%);
+    border: 1px solid rgb(0, 0, 0);
 }
