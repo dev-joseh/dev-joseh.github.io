@@ -26,21 +26,40 @@ function drawBlock(block) {
     block.style.backgroundColor = inputColor.value;
 }
 
+function removeGrid() {
+    for (const row of grid.children) {
+        for (const block of row.children) {
+            block.style.borderWidth = "0px";
+        }
+      }
+}
+
+function addGrid() {
+    for (const row of grid.children) {
+        for (const block of row.children) {
+            block.style.borderWidth = "1px";
+        }
+      }
+}
 
 function saveSketch() {
     if(confirm("Would you like to save your sketch?"))
-        html2canvas(grid).then(canvas => {
-            // Convert the canvas to a data URL
-            const dataURL = canvas.toDataURL('image/png');
-            
-            // Create a link element to download the image
-            const link = document.createElement('a');
-            link.href = dataURL;
-            link.download = 'sketch.png';
-            
-            // Simulate a click on the link to trigger the download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
+        {
+            removeGrid();
+            html2canvas(grid).then(canvas => {
+                // Convert the canvas to a data URL
+                const dataURL = canvas.toDataURL('image/png');
+                
+                // Create a link element to download the image
+                const link = document.createElement('a');
+                link.href = dataURL;
+                link.download = 'sketch.png';
+                
+                // Simulate a click on the link to trigger the download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+            addGrid();
+        }
 }
