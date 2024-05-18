@@ -29,13 +29,6 @@ a {
     font-style: italic;
 }
 
-img {
-    height: 300px;
-    width: auto;
-    border: 4px solid aliceblue;
-    border-radius: 10px;
-}
-
 .btn {
     color: aliceblue;
     font-weight: 600;
@@ -119,6 +112,13 @@ img {
     font-size: 24px;
 }
 
+#main img {
+    height: 300px;
+    width: auto;
+    border: 4px solid aliceblue;
+    border-radius: 10px;
+}
+
 .blink_text{	
     animation-name:blink;
     animation-duration: 1s;
@@ -137,6 +137,47 @@ img {
 #projects {
     padding-bottom: 40px;
     padding-top: 40px;
+}
+
+#projects .content {
+    text-align: center;
+}
+
+#projects .content div {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3%;
+}
+
+/* Projects images and animation */
+#projects img {
+    height: 200px;
+    width: 200px;
+    border: 4px solid rgb(50, 75, 96);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#projects .overlay {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 4px solid rgb(50, 75, 96);
+    border-radius: 10px;
+    z-index: 999;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(50, 75, 96);
+
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+#projects .overlay:hover{
+    opacity: 0.75;
 }
 
 /* Footer */
