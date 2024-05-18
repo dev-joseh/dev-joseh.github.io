@@ -25,3 +25,22 @@ const inputColor = document.querySelector("#html5colorpicker");
 function drawBlock(block) {
     block.style.backgroundColor = inputColor.value;
 }
+
+
+function saveSketch() {
+    if(confirm("Would you like to save your sketch?"))
+        html2canvas(grid).then(canvas => {
+            // Convert the canvas to a data URL
+            const dataURL = canvas.toDataURL('image/png');
+            
+            // Create a link element to download the image
+            const link = document.createElement('a');
+            link.href = dataURL;
+            link.download = 'sketch.png';
+            
+            // Simulate a click on the link to trigger the download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+}

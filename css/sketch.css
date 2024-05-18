@@ -24,13 +24,13 @@ a {
 .btn {
     color: aliceblue;
     font-weight: 600;
-    background-color: #3882F6;
+    background-color: hsl(0, 0%, 16%);
     border-radius: 10px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 16px;
-    border: 2px solid aliceblue;
+    border: 2px solid hsl(0, 0%, 16%);
     cursor: pointer;
     font-style: normal;
     margin: 5px;
@@ -38,7 +38,7 @@ a {
 
 .btn:hover {
     background-color: aliceblue;
-    color: #3882F6;
+    color: hsl(0, 0%, 16%);
 }
 
 /* Header */
@@ -59,12 +59,16 @@ a {
 }
 
 /* Input */
+#grid .content .input{
+    float: left;
+}
 
-#grid .input {
-    
+#grid .content .input button{
+    margin-top:15px;
 }
 
 #grid .content .sketch{
+    display: inline-block;
     margin-left: 30%;
     height: 600px;
     width: 600px;
