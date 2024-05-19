@@ -21,7 +21,7 @@ a {
     font-style: italic;
 }
 
-.btn {
+button {
     color: aliceblue;
     font-weight: 600;
     background-color: hsl(0, 0%, 16%);
@@ -36,7 +36,11 @@ a {
     margin: 5px;
 }
 
-.btn:hover {
+button:hover {
+    filter: brightness(150%);
+}
+
+.eraserButton:active {
     background-color: aliceblue;
     color: hsl(0, 0%, 16%);
 }

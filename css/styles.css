@@ -109,7 +109,11 @@ a {
     font-weight: 700;
 }
 
-#main .content p {
+#main .content .textContainer {
+    height: 250px;
+}
+
+#main .content .textContainer span {
     font-size: 24px;
 }
 

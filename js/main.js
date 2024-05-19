@@ -1,9 +1,16 @@
 
-const allContent = document.querySelectorAll('content');
-const rate = 0.2; // lower = faster fade
+const paragraphMain = document.querySelector("#main .content .textContainer .subtext");
+const paragraphMainText = "Hello there!\nI'm José, a passionate full-stack developer and Computer Science undergraduate from Brazil";
 
-allContent.forEach( (content) => {
-document.addEventListener('scroll', () => {
-    body.style.opacity = 100/window.scrollY*rate;
-})
-});
+speed = 20;
+i = 0;
+
+function typeWriterEffect() {
+  if(i < paragraphMainText.length) {
+      paragraphMain.innerHTML += paragraphMainText.charAt(i);
+      i++;
+      setTimeout(typeWriterEffect,speed)
+    }
+  }
+
+typeWriterEffect();
