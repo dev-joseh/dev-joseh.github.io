@@ -28,10 +28,6 @@ function drawBlock(block) {
     block.style.backgroundColor = inputColor.value;
 }
 
-function eraseBlock (block) {
-    block.style.backgroundColor = "white";
-}
-
 function removeGrid() {
     for (const row of grid.children) {
         for (const block of row.children) {
@@ -69,3 +65,7 @@ function saveSketch() {
             addGrid();
         }
 }
+
+function erase() {
+    location.replace(location.href);
+  }
