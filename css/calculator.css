@@ -2,12 +2,119 @@
 /* GLOBAL */
 
 body {
-    background-color: #f9fafb;
+    background-color: #cfddec;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-/* HEADER */
+.content {
+    margin: 5px;
+    margin-top: 7vh;
+    text-align: center;
+}
 
-.header {
-    color:black;
+/* CALCULATOR CONTAINER*/
+
+.calculator {
+    margin: auto;
+    width: auto;
+    max-width: max(30vw, 350px);
+    display: flex;
+    flex-direction: column;
+    background-color: #868f98;
+    border-radius: 10px;
+    gap: 2px;
+    box-shadow: 7px 7px #383838;
+}
+
+/* DISPLAY */
+.display {
+    background-color: rgb(31, 31, 31);
+    border: 2px solid rgb(31, 31, 31);
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: -2px -2px rgb(208, 208, 208);
+}
+
+.display p {
+    text-align: right;
+    color: #cfddec;
+    margin: 6px;
+    font-size: max(2em, 28px);
+}
+
+/* BUTTONS */
+
+.button_container {
+    margin: 10px;
+}
+
+.button_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+button {
+    background-color: #363636;
+    border: 2px solid rgb(34, 34, 34);
+    color: #cfddec;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin: 4px;
+    flex: 1;
+    font-size: max(1.5em, 20px);
+    border-radius: 10px;
+    box-shadow: 5px 5px #666;
+    transform: translateY(-4px);
+}
+
+button:hover {
+    filter: brightness(120%);
+    transition: 0.05s;
+}
+
+button:active {
+    background-color: #cfddec;
+    color: #363636;
+    box-shadow: 2px 2px #666;
+    transform: translateY(0px);
+  }
+
+.btn1 {
+    background-color: #363636;
+    border: 2px solid rgb(34, 34, 34);
+    color: #cfddec;
+}
+
+.btn2 {
+    background-color: #1e1e1e;
+    border: 2px solid rgb(34, 34, 34);
+    color: #cfddec;
+}
+
+.btn3 {
+    background-color: #4f4f4f;
+    border: 2px solid rgb(34, 34, 34);
+    color: #cfddec;
+}
+
+/* FOOTER */
+footer {
+    font-size: max(1.5em, 20px);
+    margin-top: 10vh;
+}
+
+footer p{
+    display: inline;
+}
+
+footer a{
+    text-decoration: none;
+    color: #363636;
+}
+
+.fa-github:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2);
 }
