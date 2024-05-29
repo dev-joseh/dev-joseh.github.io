@@ -106,11 +106,15 @@ const backSpacePressed = function() {
     else {
         // This deletes the rightmost number and counts how many rightmost zeros will be after its deletion
         let str = currentNumber.toString();
+        
         currentNumber = Number( str.slice(0,-1) );
-        let i = str.length - 2;
-        while( str[i] == 0) {
-            zeros ++;
-            i--;
+
+        if(dotFlag) {
+            let i = str.length - 2;
+            while( str[i] == 0) {
+                zeros ++;
+                i--;
+            }
         }
     }
     if(currentNumber == 0 && zeros > 0)
