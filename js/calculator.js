@@ -109,7 +109,7 @@ const backSpacePressed = function() {
         
         currentNumber = Number( str.slice(0,-1) );
 
-        if(dotFlag) {
+        if(str.includes(".")) {
             let i = str.length - 2;
             while( str[i] == 0) {
                 zeros ++;
