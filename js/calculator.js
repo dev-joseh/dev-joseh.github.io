@@ -49,6 +49,11 @@ const toDisplay = function() {
 }
 toDisplay();
 
+const resetVariables = function() {
+    dotFlag = false;
+    zeros = 0;
+}
+
 // ======================== Event handlers for buttons ======================== 
 function numberPressedHandler(number) {
     let str = currentNumber.toString();
@@ -83,16 +88,21 @@ const clearAllPressed = function() {
     currentNumber = 0;
     previousNumber = 0;
     currentOperation = ' ';
+    zeros = 0;
+    resetVariables();
     toDisplay();
 }
 
 const clearCurrentPressed = function() {
     currentNumber = 0;
+    resetVariables();
     toDisplay();
 }
 
 const backSpacePressed = function() {
     currentNumber = Number(currentNumber.toString().slice(0,-1));
+    if(currentNumber == 0)
+        resetVariables();
     toDisplay();
 }
 
@@ -117,6 +127,7 @@ const operate = function(operation) {
     previousNumber = currentNumber;
     currentNumber = 0;
     currentOperation = operation;
+    resetVariables();
     toDisplay();
 }
 
