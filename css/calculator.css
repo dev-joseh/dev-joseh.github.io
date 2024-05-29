@@ -36,11 +36,26 @@ body {
     box-shadow: -2px -2px rgb(208, 208, 208);
 }
 
-.display p {
+.display {
     text-align: right;
     color: #cfddec;
     margin: 6px;
     font-size: max(2em, 28px);
+}
+
+.display p,
+#operation {
+    margin: 6px;
+    margin-top: 0.05em;
+    margin-bottom: 0.05em;
+}
+
+#previousNumber {
+    display: inline;
+}
+
+#operation {
+    text-align: left;
 }
 
 /* BUTTONS */

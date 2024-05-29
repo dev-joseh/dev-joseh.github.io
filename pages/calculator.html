@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/calculator.js" defer></script>
-    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="../css/calculator.css">
 
     <title>Simple Calculator</title>
@@ -14,7 +14,9 @@
     <div class="content">
         <div class="calculator">
             <div class="display">
-                <p>0</p>
+                <span id="operation"></span>
+                <p id="previousNumber"></p>
+                <p id="currentNumber"></p>
             </div>
             <div class="button_container">
                 <div class="button_row">
@@ -24,38 +26,38 @@
                     <button class="btn1" id="backspace">⌫</button>
                 </div>
                 <div class="button_row">
-                    <button class="btn1" id="inverse">⅟</button>
+                    <button class="btn1" id="inverse">⅟<sub>x</sub></button>
                     <button class="btn1" id="square">x²</button>
                     <button class="btn1" id="sqrt">√x</button>
                     <button class="btn1" id="divide">÷</button>
                 </div>
                 <div class="button_row">
-                    <button class="btn3" id="1">1</button>
-                    <button class="btn3" id="2">2</button>
-                    <button class="btn3" id="3">3</button>
+                    <button class="btn3" id="1" data-number=1>1</button>
+                    <button class="btn3" id="2" data-number=2>2</button>
+                    <button class="btn3" id="3" data-number=3>3</button>
                     <button class="btn1" id="multiply">*</button>
                 </div>
                 <div class="button_row">
-                    <button class="btn3" id="4">4</button>
-                    <button class="btn3" id="5">5</button>
-                    <button class="btn3" id="6">6</button>
+                    <button class="btn3" id="4" data-number=4>4</button>
+                    <button class="btn3" id="5" data-number=5>5</button>
+                    <button class="btn3" id="6" data-number=6>6</button>
                     <button class="btn1" id="minus">-</button>
                 </div>
                 <div class="button_row">
-                    <button class="btn3" id="7">7</button>
-                    <button class="btn3" id="8">8</button>
-                    <button class="btn3" id="9">9</button>
+                    <button class="btn3" id="7" data-number=7>7</button>
+                    <button class="btn3" id="8" data-number=8>8</button>
+                    <button class="btn3" id="9" data-number=9>9</button>
                     <button class="btn1" id="plus">+</button>
                 </div>
                 <div class="button_row">
                     <button class="btn3" id="invertValue">⁺∕₋</button>
-                    <button class="btn3" id="0">0</button>
+                    <button class="btn3" id="0" data-number=0>0</button>
                     <button class="btn3" id="dot">.</button>
                     <button class="btn2" id="equals">=</button>
                 </div>
             </div>
         </div>
-        
+
         <footer>
             <p>Copyright © 2024 dev-joseh </p><a href="https://github.com/dev-joseh" target="_blank" rel="norefferer noopener">
                 <i class='fab fa-github'></i>
