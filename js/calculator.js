@@ -11,6 +11,7 @@ let currentOperation = " ";
 let currentNumber = 0;
 let previousNumber = 0;
 let dotFlag = false;
+let zeros = 0;
 
 // ======================== Display conversor function ======================== 
 function convertToString(number) {
@@ -33,6 +34,8 @@ const toDisplay = function() {
     currentDisplay.innerText  = convertToString(currentNumber);
     if(dotFlag)
         currentDisplay.innerText += ".";
+    for(let i=0;i<zeros;i++)
+        currentDisplay.innerText += "0";
     if(previousNumber != 0)
         {
             previousDisplay.innerText = convertToString(previousNumber);
@@ -56,9 +59,19 @@ function numberPressedHandler(number) {
         str = "";
     if(dotFlag) {
         str = str + ".";
-        dotFlag = false;
+        if(number != "0")
+            dotFlag = false;
     }
-    currentNumber = Number( str + number)
+
+    if(number == "0" && str.includes("."))
+        zeros++;
+    else {
+        for(let i=0;i<zeros;i++)
+            str += "0";
+        zeros = 0;
+        currentNumber = Number( str + number )
+    }
+
     toDisplay();
 }
 
