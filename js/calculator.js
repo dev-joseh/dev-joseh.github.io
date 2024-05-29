@@ -100,9 +100,22 @@ const clearCurrentPressed = function() {
 }
 
 const backSpacePressed = function() {
-    currentNumber = Number(currentNumber.toString().slice(0,-1));
-    if(currentNumber == 0)
-        resetVariables();
+    // If there are any rightmost zeros, just decrements it
+    if(zeros > 0)
+        zeros--;
+    else {
+        // This deletes the rightmost number and counts how many rightmost zeros will be after its deletion
+        let str = currentNumber.toString();
+        currentNumber = Number( str.slice(0,-1) );
+        let i = str.length - 2;
+        while( str[i] == 0) {
+            zeros ++;
+            i--;
+        }
+    }
+    if(currentNumber == 0 && zeros > 0)
+        dotFlag = true;
+        
     toDisplay();
 }
 
