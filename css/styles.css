@@ -157,8 +157,13 @@ a {
 
 #projects .content div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 3%;
+}
+
+#projects .content span {
+    width: 200px;
 }
 
 /* Projects images and animation */
