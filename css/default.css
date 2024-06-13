@@ -1,0 +1,22 @@
+/* Default settings and resets for every project */
+
+* {
+    margin:0%;
+    padding:0%;
+    font-family: system-ui, sans-serif;
+    box-sizing: inherit;
+}
+
+.clickable {
+    transition: 0.1s;
+}
+
+.clickable:hover,
+.clickable:focus {
+    cursor: pointer;
+    transform: scale(1.1) translate(0, 2%);
+}
+
+.clickable:active {
+    transform: translate(0, -2%);
+}
