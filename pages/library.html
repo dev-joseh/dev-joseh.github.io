@@ -15,27 +15,64 @@
 </head>
 <body>
 
-    <div id="popup1" class="overlay">
+    <div id="popup-window" class="overlay">
         <div class="popup">
-            <h2>Here i am</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis corrupti inventore dolorem, repellendus ipsa nulla consequatur sequi earum vero distinctio alias expedita necessitatibus culpa ad magni, officiis deserunt quasi?
+            <div class="header">
+                <h2></h2>
+                <a class="close clickable" href="#">x</a>
             </div>
+            <form>
+                <div>
+                    <input type="text" id="name" placeholder="*Title" required>
+                </div>
+
+                <div>
+                    <input type="text" id="author" placeholder="Author">
+                </div>
+
+                <div>
+                    <select id="genre">
+                        <option value="" disabled selected>Genre</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Sci-fi">Sci-fi</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Education">Non-fiction</option>
+                        <option value="Philosophy">Philosophy</option>
+                        <option value="Business">Business</option>
+                        <option value="Self-help">Self-help</option>
+                        <option value="Meditation">Meditation</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="number" id="pages" placeholder="Pages">
+                </div>
+
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="status">
+                        <span class="slider"></span>
+                      </label>
+                      <p> Read?</p>
+                </div>
+
+                <a href="#" class="btn clickable" id="submitButton" onclick="addBookToLibrary()">Submit</a>
+            </form>
         </div>
     </div>
 
     <div class="upper">
         <div class="header">
-            <h1>library</h1>
-            <button class="clickable">Log In</button>
+            <h1>my library</h1>
+            <a href="#"><button class="clickable">Log In</button></a>
         </div>
         <div class="control-panel">
             <div>
-                <a class="button" href="#popup1"><button class="clickable">Add</button></a>
-                <button class="clickable">Load</button>
-                <button class="clickable">Save</button>
-                <button class="clickable" id="reset">Reset</button>
+                <a href="#popup-window"><button class="clickable" onclick="popupNewBook()">Add</button></a>
+                <a href="#"><button class="clickable">Load</button></a>
+                <a href="#"><button class="clickable">Save</button></a>
+                <a href="#" id="reset"><button class="clickable">Reset</button></a>
             </div>
             <span>
                 <input type="checkbox" id="checkTheme">
@@ -47,108 +84,7 @@
         </div>
     </div>
 
-    <div class="book-grid">
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div>
-            <h2>Lord of the Rings</h2>
-            <p>Author: Tolkien</p>
-            <p>Genre: Fantasy</p>
-            <p>Pages: 459</p>
-            <div>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-    </div>
+    <div class="book-grid"></div>
 
     <footer>
         <p>Copyright © 2024 dev-joseh </p>

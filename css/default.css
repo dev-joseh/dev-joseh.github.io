@@ -7,10 +7,6 @@
     box-sizing: inherit;
 }
 
-.clickable {
-    transition: 0.1s;
-}
-
 .clickable:hover,
 .clickable:focus {
     cursor: pointer;
