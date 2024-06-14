@@ -92,3 +92,8 @@ function popupNewBook() {
 function popupEditBook() {
     popup.textContent="Edit Book";
 }
+
+// Misc
+function reset() {
+    location.reload();
+}

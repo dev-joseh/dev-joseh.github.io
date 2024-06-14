@@ -237,9 +237,10 @@ button,
     background-color: var(--background);
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 295px));
     grid-template-rows: auto 1fr;
-    height: 65vh;
+    grid-auto-flow: row;
+    height: 63vh;
     overflow: overlay;
     margin-top: 10px;
     padding-top: 15px;
@@ -286,10 +287,10 @@ button,
 
 footer {
     font-size: 1.1rem;
-    max-height: 5vh;
+    min-height: 5vh;
     text-align: center;
     color: var(--font-1);
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 footer p{
