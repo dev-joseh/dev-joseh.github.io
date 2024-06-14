@@ -11,6 +11,7 @@
     --font-1: black;
     --font-2: white;
     --font-3: rgb(92, 92, 92);
+    --read-color: rgb(0, 181, 0);
     --shadow-color: rgb(37, 37, 37);
 }
 
@@ -20,6 +21,7 @@
     --background: #232323;
     --font-1: white;
     --font-2: black;
+    --read-color: green;
     --font-3: rgb(170, 170, 170);
     --shadow-color: rgb(241, 241, 241);
 }
@@ -257,11 +259,11 @@ button,
 }
 
 .book-grid .read {
-    border: 2px solid green;
+    border: 3px solid var(--read-color);
 }
 
 .book-grid .unread {
-    border: 2px solid var(--detail-color);
+    border: 3px solid var(--detail-color);
 }
 
 .book-grid p {

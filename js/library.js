@@ -54,9 +54,27 @@ function displayBook(book, index) {
 
 function displayLibrary() {
     bookGrid.innerHTML = "";
-    for(let i=0; i<myLibrary.length; i++) {
-            displayBook(myLibrary[i], i);
+    myLibrary.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+        const statusA = a.status;
+        const statusB = b.status;
+
+        if(statusA == statusB) {
+            if (nameA < nameB) 
+                return -1;
+            if (nameA > nameB) 
+                return 1;
+            return 0;
         }
+        else
+           return statusA ? 1 : -1;
+
+    });
+
+    for(let i=0; i<myLibrary.length; i++) {
+        displayBook(myLibrary[i], i);
+    }
 }
 
 function addBookToLibrary() {
