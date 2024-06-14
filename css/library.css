@@ -5,16 +5,6 @@
 }
 
 :root {
-    --main-color: #101010;
-    --detail-color: #e6e6e6;
-    --background: #232323;
-    --font-1: white;
-    --font-2: black;
-    --font-3: rgb(170, 170, 170);
-    --shadow-color: rgb(241, 241, 241);
-}
-
-:root.light {
     --main-color: #eeeeee;
     --detail-color: #222222;
     --background:  #cfcfcf;
@@ -22,6 +12,16 @@
     --font-2: white;
     --font-3: rgb(92, 92, 92);
     --shadow-color: rgb(37, 37, 37);
+}
+
+:root.dark {
+    --main-color: #101010;
+    --detail-color: #e6e6e6;
+    --background: #232323;
+    --font-1: white;
+    --font-2: black;
+    --font-3: rgb(170, 170, 170);
+    --shadow-color: rgb(241, 241, 241);
 }
 
 body {
