@@ -80,7 +80,7 @@ function cpuMoveNormal() {
 function cpuMoveHard() {
     // Checa posições disponíveis
     const avaliablePositions = checkEmptyPositions();
-    // 1 Testa se dá pra ganhar ou perder na próxima
+    // Testa se dá pra ganhar ou perder na próxima
     for(let i=0;i<avaliablePositions.length;i++){
         let listOfTagsCopy = listOfTags.slice();
         listOfTagsCopy[avaliablePositions[i]]="O";
@@ -98,40 +98,27 @@ function cpuMoveHard() {
         }
     }
 
-    // Testa se tem como jogar no meio ou nos cantos
+    // Joga no meio
     if(avaliablePositions.includes(4)){
         makeMove(avaliablePositions[avaliablePositions.indexOf(4)],player2);
         return;
     }
 
-    for(let i=0;i<avaliablePositions.length;i++)
-        for(let j=i+1;j<avaliablePositions.length;j++){
-        let listOfTagsCopy = listOfTags.slice();
-        listOfTagsCopy[avaliablePositions[i]]="O";
-        listOfTagsCopy[avaliablePositions[j]]="O";
-        if(testWinCondition(listOfTagsCopy)[0]){
-            makeMove(avaliablePositions[i],player2);
-            return;
-        }
-    }
-
-    for(let i=0;i<avaliablePositions.length;i++)
-        for(let j=i+1;j<avaliablePositions.length;j++){
-        let listOfTagsCopy = listOfTags.slice();
-        listOfTagsCopy[avaliablePositions[i]]="X";
-        listOfTagsCopy[avaliablePositions[j]]="X";
-        if(testWinCondition(listOfTagsCopy)[0]){
-            makeMove(avaliablePositions[i],player2);
-            return;
-        }
-    }
-
-    for(let i=0;i<=8;i+=2){
-        if(avaliablePositions.includes(i)){
+    // Testa se pode evitar um "fork"
+    if((listOfTags[0]=="X" && listOfTags[8]=="X") || (listOfTags[2]=="X" && listOfTags[6]=="X")){
+        for(let i=1;i<=7;i+=2)
+            if(avaliablePositions.includes(i)){
                 makeMove(avaliablePositions[avaliablePositions.indexOf(i)],player2);
                 return;
             }
     }
+
+    // Joga nos cantos
+    for(let i=0;i<=8;i+=2)
+        if(avaliablePositions.includes(i)){
+            makeMove(avaliablePositions[avaliablePositions.indexOf(i)],player2);
+            return;
+        }
 
     // Joga aleatoriamente
     cpuMoveEasy();
