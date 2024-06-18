@@ -1,0 +1,107 @@
+
+/* Global */
+:root {
+    --main-color: #3DC2EC;
+    --background-color: #402E7A;
+    --font-color: black;
+
+    --marked-background-color: rgb(184, 184, 184);
+    --unmarked-background-color: white;
+    --winner-color: green;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.content {
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.content > div{
+    background-color: var(--main-color);
+    margin: auto;
+    width: max(20vw, 300px);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* All clickables */
+
+.menu button,
+.board > div[status="unmarked"]  {
+    transition: 0.2s ease-in-out;
+}
+
+.menu button:hover,
+.board > div[status="unmarked"]:hover {
+    background-color: var(--marked-background-color);
+    color: var(--font-color);
+    filter: opacity(0.8);
+    cursor: pointer;
+}
+
+/* Menus */
+.content .menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.menu p,
+.menu select,
+.menu button {
+    display: inline;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.menu span {
+    padding: 5px;
+    font-weight: 700;
+}
+
+/* Game board */
+.content .board {
+    display: grid;
+    height: max(20vw, 300px);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.board > div {
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.board > div[status="marked"] {
+    background-color: var(--marked-background-color);
+    cursor: default;
+    color: var(--font-color);
+}
+
+.board > div[status="unmarked"] {
+    background-color: var(--unmarked-background-color);
+    color: rgb(0,0,0,0);
+}
+
+.board > div[status="winner"] {
+    background-color: var(--winner-color);
+}
+
+/* Footer extra */
+footer {
+    margin-top: 10px;
+    color: white;
+}
