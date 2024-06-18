@@ -23,7 +23,7 @@ body {
 .content > div{
     background-color: var(--main-color);
     margin: auto;
-    width: max(20vw, 300px);
+    width: max(22vw, 320px);
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
